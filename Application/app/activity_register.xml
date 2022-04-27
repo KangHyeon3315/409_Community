@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/et_newid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_newpass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_newpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_newname"
+        app:layout_constraintEnd_toEndOf="@+id/et_newid"
+        app:layout_constraintStart_toStartOf="@+id/et_newid"
+        app:layout_constraintTop_toBottomOf="@+id/et_newid" />
+
+    <EditText
+        android:id="@+id/et_newname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_newage"
+        app:layout_constraintEnd_toEndOf="@+id/et_newpass"
+        app:layout_constraintStart_toStartOf="@+id/et_newpass"
+        app:layout_constraintTop_toBottomOf="@+id/et_newpass" />
+
+    <EditText
+        android:id="@+id/et_newage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="나이"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_newregister"
+        app:layout_constraintEnd_toEndOf="@+id/et_newname"
+        app:layout_constraintStart_toStartOf="@+id/et_newname"
+        app:layout_constraintTop_toBottomOf="@+id/et_newname" />
+
+    <Button
+        android:id="@+id/btn_newregister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="회원가입"
+        app:layout_constraintEnd_toEndOf="@+id/et_newage"
+        app:layout_constraintStart_toStartOf="@+id/et_newage"
+        app:layout_constraintTop_toBottomOf="@+id/et_newage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
