@@ -10,15 +10,16 @@
 ## response
 ### error or failure
     {
-        "result": false,
-        "error": Error Code
+        "result": False,
+        "error" : error code,
         "msg": failure message
     }
 
 ### success
     {
-        "result" true,
-        "name": user name
+        "result": True,
+        "name": user name,
+        "id": user id
         향후 필요한 정보 추가
     }
 
