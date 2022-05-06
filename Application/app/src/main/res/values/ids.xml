@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="join_email" type="id" />
+    <item name="join_password" type="id" />
+    <item name="join_name" type="id" />
+    <item name="join_pwck" type="id" />
+</resources>
