@@ -1,6 +1,6 @@
 import traceback
 import json
-from flask import Flask, Blueprint, request
+from flask import Flask, Blueprint, request , session
 
 login_bp = Blueprint('Data', __name__, url_prefix='/api/data')
 
@@ -13,6 +13,14 @@ def ID_CHECK(check):
     return True
 def PASSWORD_CHECK(check):
     return True
+
+'''
+@login_bp.route('/' ,methods =('POST',))
+def home():
+    if 'userid' in session:
+        userid = session['userid']
+'''
+
 
 @login_bp.route('/login', methods=('POST',))
 def login():
@@ -28,6 +36,8 @@ def login():
                 if id in TestPassword.keys():  # 데이터베이스에 아이디가 있는지 확인
 
                     if TestPassword[id] == pw:  # 유저가 입력한 비밀번호와 데이터베이스의 비밀번호 비교하기
+
+                        session['userid'] = id
 
                         return json.dumps({
                             "Result": True,
@@ -63,8 +73,8 @@ def login():
         return json.dumps({"result": False, "error": 0, "msg": traceback.format_exc()})
 
 
-@login_bp.route("/user/register", methods=['POST', 'GET'])
-def user_register():
+@login_bp.route("/register", methods=['POST',])
+def register():
     try:
         if request.method == 'POST':
 
@@ -73,7 +83,6 @@ def user_register():
             id = rq_js['id']
             pw = rq_js['pw']
             name = rq_js['name']  # 유저 닉네임
-            pw_check = rq_js['pw_check']
 
             # 아이디 체크
             if ID_CHECK(id) and PASSWORD_CHECK(pw):  # 아이디, 비밀번호 체크후 넘어가기
@@ -83,8 +92,11 @@ def user_register():
                     TestName[id] = id  # 유저 이름,유저 아이디 추가
                     TestPassword[id] = pw  # 유저 아이디에 비밀번호 추가
 
+
+
                     return json.dumps({  # 회원가입 성공
                         "Result": True,
+                        "id" : id,
                         "name": name
                     })
                 else:
@@ -102,6 +114,18 @@ def user_register():
                 "Result": False,
                 "msg": "Request is not POST"
             })
+    except:
+        traceback.print_exc()
+        return json.dumps({"result": False, "error": 0, "msg": traceback.format_exc()})
+
+
+@login_bp.route("/logout", methods=['POST',])
+def logout():
+    try:
+        session.pop('userid',None)
+        return json.dumps({"result" : True,})
+
+
     except:
         traceback.print_exc()
         return json.dumps({"result": False, "error": 0, "msg": traceback.format_exc()})
