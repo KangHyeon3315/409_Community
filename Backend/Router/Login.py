@@ -1,12 +1,11 @@
 import traceback
 import json
 from flask import Flask, Blueprint, request , session
+import Backend.Utils.Database as DB
 
 login_bp = Blueprint('Data', __name__, url_prefix='/api/data')
 
 
-TestName = {}
-TestPassword = {}
 
 
 def ID_CHECK(check):
@@ -33,9 +32,9 @@ def login():
 
             if ID_CHECK(id) and PASSWORD_CHECK(pw):  # 아이디 , 비밀번호 체크후 넘기기
 
-                if id in TestPassword.keys():  # 데이터베이스에 아이디가 있는지 확인
+                if DB.Database.id_check(id):  # 데이터베이스에 아이디가 있는지 확인
 
-                    if TestPassword[id] == pw:  # 유저가 입력한 비밀번호와 데이터베이스의 비밀번호 비교하기
+                    if DB.Database.is_user(id,pw):  # 유저가 입력한 비밀번호와 데이터베이스의 비밀번호 비교하기
 
                         session['userid'] = id
 
@@ -87,7 +86,7 @@ def register():
             # 아이디 체크
             if ID_CHECK(id) and PASSWORD_CHECK(pw):  # 아이디, 비밀번호 체크후 넘어가기
 
-                if id not in TestPassword.keys():  # 아이디 중복 여부
+                if not DB.Database.id_check(id):  # 아이디 중복 여부
 
                     TestName[id] = id  # 유저 이름,유저 아이디 추가
                     TestPassword[id] = pw  # 유저 아이디에 비밀번호 추가
