@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="Changes">
+    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="로그인 부분 session 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Router/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Router/Login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegisterActivity.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651129824447</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="로그인 부분 session 추가">
+      <created>1652339395484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652339395484</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="로그인 부분 session 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인 부분 session 추가" />
   </component>
 </project>
