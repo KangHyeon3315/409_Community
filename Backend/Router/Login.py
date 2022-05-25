@@ -1,17 +1,13 @@
 import traceback
 import json
 from flask import Flask, Blueprint, request , session
-import Backend.Utils.Database as DB
+from Backend.Utils.Database import Database
+from Backend.Utils.validation import Validation
 
-login_bp = Blueprint('Data', __name__, url_prefix='/api/data')
+login_bp = Blueprint('User', __name__, url_prefix='/api/user')
 
-
-
-
-def ID_CHECK(check):
-    return True
-def PASSWORD_CHECK(check):
-    return True
+CHECK_DB = Database()
+CHECK_ID = Validation()
 
 '''
 @login_bp.route('/' ,methods =('POST',))
@@ -19,20 +15,21 @@ def home():
     if 'userid' in session:
         userid = session['userid']
 '''
-CHECK = DB.Database()
+
+
 
 
 @login_bp.route('/login', methods=('POST',))
 def login():
     try:
         if request.method == 'POST':
-            rq_js = request.json(silent=True)
+            rq_js = request.get_json(silent=True)
 
             id = rq_js['id']
             pw = rq_js['pw']
 
                                       # 아이디 , 비밀번호 체크후 넘기기
-            if not ID_CHECK():
+            if not (CHECK_ID.check_validation(id) and CHECK_ID.check_validation(pw)):
                 # 아이디 , 비밀번호 체크후 넘기기
                 return json.dumps({  # 아이디 비번 조건틀림
                     "Result": False,
@@ -40,7 +37,7 @@ def login():
                     "msg": "Id or password condition is wrong"
                 })
 
-            if not CHECK.is_user(id, pw):
+            if not CHECK_DB.is_user(id, pw):
                 return json.dumps({  # 비밀번호 틀림
                     "Result": False,
                     "error": "3",
@@ -70,20 +67,20 @@ def register():
     try:
         if request.method == 'POST':
 
-            rq_js = request.json(silent=True)
+            rq_js = request.get_json(silent=True)
 
             id = rq_js['id']
             pw = rq_js['pw']
             name = rq_js['name']  # 유저 닉네임
 
             # 아이디 체크
-            if not ID_CHECK(id) and PASSWORD_CHECK(pw):  # 아이디, 비밀번호 체크후 넘어가기
+            if not CHECK_ID.check_validation(id) and not CHECK_ID.check_validation(pw) :  # 아이디, 비밀번호 체크후 넘어가기
                 return json.dumps({  # 아이디 비밀번호 조건 틀림
                     "Result": False,
                     "msg": "Id or password condition is wrong"
                 })
 
-            if not CHECK.id_check(id):
+            if not CHECK_DB.id_check(id):
                 return json.dumps({  # 이미 존재하는 아이디
                     "Result": False,
                     "msg": "The id that already exists"

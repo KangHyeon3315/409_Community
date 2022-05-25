@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="로그인 부분 session 추가">
+    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="머지 후 DB체크 함수 연결완료">
+      <change afterPath="$PROJECT_DIR$/Backend/Utils/validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/409Community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/409Community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Router/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Router/Login.py" afterDir="false" />
     </list>
@@ -39,9 +42,38 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="409Community" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backend/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,12 +90,12 @@
       <option name="project" value="LOCAL" />
       <updated>1651129824447</updated>
     </task>
-    <task id="LOCAL-00002" summary="로그인 부분 session 추가">
-      <created>1652339395484</created>
+    <task id="LOCAL-00002" summary="머지 후 DB체크 함수 연결완료">
+      <created>1652601837921</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1652339395484</updated>
+      <updated>1652601837921</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -79,7 +111,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/seojin_" />
+                        <option value="origin/Dongwoo" />
                       </list>
                     </value>
                   </entry>
@@ -93,7 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <MESSAGE value="로그인 부분 session 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인 부분 session 추가" />
+    <MESSAGE value="머지 후 DB체크 함수 연결완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="머지 후 DB체크 함수 연결완료" />
   </component>
 </project>
