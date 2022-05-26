@@ -29,7 +29,7 @@ def login():
             pw = rq_js['pw']
 
                                       # 아이디 , 비밀번호 체크후 넘기기
-            if not (CHECK_ID.check_validation(id) and CHECK_ID.check_validation(pw)):
+            if not (CHECK_ID.id_validation(id) and CHECK_ID.pw_validation(pw)):
                 # 아이디 , 비밀번호 체크후 넘기기
                 return json.dumps({  # 아이디 비번 조건틀림
                     "Result": False,
@@ -74,7 +74,7 @@ def register():
             name = rq_js['name']  # 유저 닉네임
 
             # 아이디 체크
-            if not CHECK_ID.check_validation(id) and not CHECK_ID.check_validation(pw) :  # 아이디, 비밀번호 체크후 넘어가기
+            if not (CHECK_ID.id_validation(id) and CHECK_ID.pw_validation(pw)):  # 아이디, 비밀번호 체크후 넘어가기
                 return json.dumps({  # 아이디 비밀번호 조건 틀림
                     "Result": False,
                     "msg": "Id or password condition is wrong"
