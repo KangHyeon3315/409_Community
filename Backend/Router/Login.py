@@ -17,8 +17,6 @@ def home():
 '''
 
 
-
-
 @login_bp.route('/login', methods=('POST',))
 def login():
     try:
@@ -71,31 +69,40 @@ def register():
 
             id = rq_js['id']
             pw = rq_js['pw']
-            name = rq_js['name']  # 유저 닉네임
+            nickname = rq_js['name']  # 유저 닉네임
 
             # 아이디 체크
             if not (CHECK_ID.id_validation(id) and CHECK_ID.pw_validation(pw)):  # 아이디, 비밀번호 체크후 넘어가기
                 return json.dumps({  # 아이디 비밀번호 조건 틀림
                     "Result": False,
+                    "error": "1",
                     "msg": "Id or password condition is wrong"
                 })
 
             if not CHECK_DB.id_check(id):
                 return json.dumps({  # 이미 존재하는 아이디
                     "Result": False,
+                    "error": "4",
                     "msg": "The id that already exists"
                 })
                 # 아이디 중복 여부
+            if not CHECK_DB.insert_user(id, pw, nickname, 0):  # 회원가입 성공여부
+                return json.dumps({
+                    "Result": False,
+                    "error": "5",
+                    "msg": "Failed to sign up for membership"
+                })
 
             return json.dumps({  # 회원가입 성공
                 "Result": True,
                 "id": id,
-                "name": name
+                "name": nickname
             })
 
         else:
             return json.dumps({  # request is Not POST
                 "Result": False,
+                "error" : "0",
                 "msg": "Request is not POST"
             })
 

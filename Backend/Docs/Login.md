@@ -79,6 +79,11 @@
         code : 4
         msg : "The id that already exists"
     }
+    {
+        # 회원가입 실패했을경우
+        code : 5
+        msg : "Failed to sign up for membership"
+    }
 
 
 ### success
