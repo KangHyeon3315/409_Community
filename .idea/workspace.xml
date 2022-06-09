@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="user check">
-      <change beforePath="$PROJECT_DIR$/.idea/409Community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/409Community.iml" afterDir="false" />
+    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="insert_user&#10;find_dept_id">
+      <change afterPath="$PROJECT_DIR$/Backend/Utils/Login_DB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Utils/Notice_DB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Utils/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Utils/Database.py" afterDir="false" />
     </list>
@@ -29,12 +30,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/YSJ/409_Community-1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/YSJ/409_Community-1",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.Database">
     <configuration name="Database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="409Community" />
@@ -101,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652254616886</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="insert_user&#10;find_dept_id">
+      <created>1653458766344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653458766345</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="user check" />
-    <option name="LAST_COMMIT_MESSAGE" value="user check" />
+    <MESSAGE value="insert_user&#10;find_dept_id" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert_user&#10;find_dept_id" />
   </component>
 </project>
