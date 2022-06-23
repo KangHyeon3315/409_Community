@@ -4,6 +4,7 @@ from flask import Flask, Blueprint, request , session
 from Backend.Utils.Database import Database
 from Backend.Utils.validation import Validation
 
+
 login_bp = Blueprint('User', __name__, url_prefix='/api/user')
 
 CHECK_DB = Database()

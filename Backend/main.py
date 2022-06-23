@@ -3,6 +3,7 @@ from Router.Login import login_bp
 
 
 app = Flask(__name__)
+app.secret_key = b'sadf33#asddbs'
 
 if __name__ == "__main__":
 
