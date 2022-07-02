@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="아이디 비밀번호 유효성 검사및 응답 확인완료">
-      <change beforePath="$PROJECT_DIR$/.idea/409Community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/409Community.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-26__5_37_________Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-26_오후_5_37,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-02__11_22_________Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-02_오전_11_22,_병합_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="6b1b33fd-a93a-44ad-a878-c7a1467768bd" name="Changes" comment="flask 보안키 추가및 테스트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Router/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Router/Login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652601837921</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="flask 보안키 추가및 테스트">
+      <created>1655972776503</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655972776503</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <MESSAGE value="머지 후 DB체크 함수 연결완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="머지 후 DB체크 함수 연결완료" />
+    <MESSAGE value="flask 보안키 추가및 테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask 보안키 추가및 테스트" />
   </component>
 </project>

@@ -22,7 +22,7 @@ def home():
 def login():
     try:
         if request.method == 'POST':
-            rq_js = request.get_json(silent=True)
+            rq_js = request.args.get()
 
             id = rq_js['id']
             pw = rq_js['pw']
@@ -66,7 +66,7 @@ def register():
     try:
         if request.method == 'POST':
 
-            rq_js = request.get_json(silent=True)
+            rq_js = request.args.get()
 
             id = rq_js['id']
             pw = rq_js['pw']
@@ -93,6 +93,8 @@ def register():
                     "error": "5",
                     "msg": "Failed to sign up for membership"
                 })
+
+
 
             return json.dumps({  # 회원가입 성공
                 "Result": True,
