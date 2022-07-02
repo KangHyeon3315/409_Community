@@ -1,8 +1,8 @@
 import traceback
 from Backend.Utils.Database import Database
 
-class Login_DB(Database):
 
+class LoginDB(Database):
     def insert_user(self, user_id, user_pw, user_nickname, dept_id) -> bool:
         try:
             curs = self.connect.cursor()
@@ -11,7 +11,7 @@ class Login_DB(Database):
             curs.execute(sql, val)
             self.connect.commit()
             return True
-        except Exception:
+        except (Exception,):
             traceback.print_exc()
             return False
 

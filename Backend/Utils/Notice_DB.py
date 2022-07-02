@@ -1,7 +1,8 @@
 import traceback
 from Backend.Utils.Database import Database
 
-class Notice_DB(Database):
+
+class NoticeDB(Database):
     def create_notice(self, notice_id, notice_title, notice_writer, notice_date, notice_content) -> bool:
         try:
             curs = self.connect.cursor()
@@ -10,7 +11,7 @@ class Notice_DB(Database):
             curs.execute(sql, val)
             self.connect.commit()
             return True
-        except Exception:
+        except (Exception,):
             traceback.print_exc()
             return False
 
@@ -22,6 +23,7 @@ class Notice_DB(Database):
             curs.execute(sql, val)
             self.connect.commit()
             return True
-        except Exception:
+        except (Exception,):
             traceback.print_exc()
             return False
+
